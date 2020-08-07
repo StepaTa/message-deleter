@@ -87,7 +87,7 @@ def edit(update) -> dict:
         else:
             count = 2
     else:
-        count = int(count[0]) + 1
+        count = int(count[0]) + 2
     msg_ids = [str(update[1])]
     for i, cmsg in enumerate(method('messages.getHistory', peer_id = update[3], count = 200)['response']['items']):
         if i == 0 and not edit_command:
